@@ -218,10 +218,10 @@ def sync_task(url, folder, projects, tasks,
         context = waiting
         due_date = k.missing_value
         if len(row['Due date']):
-            due_date = datetime.strptime(row['Due date'], "%d %b %Y")
+            due_date = datetime.strptime(row['Due date'], "%m/%d/%Y")
         start_date = k.missing_value
         if len(row['Start']):
-            start_date = datetime.strptime(row['Start'], "%d %b %Y")
+            start_date = datetime.strptime(row['Start'], "%m/%d/%Y")
         estimated_minutes = k.missing_value
         if len(row['Estimated time']):
             estimated_minutes = int(round(float(row['Estimated time']) * 60))
